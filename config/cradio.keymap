@@ -23,7 +23,7 @@
         };
     };
 
-    combos {
+combos {
         compatible = "zmk,combos";
 
         esc_sd {
@@ -37,8 +37,23 @@
         };
 
         spot_xc_command_enter {
-            bindings = <&kp LG(ENTER)>;
+            bindings = <&kp LG(SPACE)>;
             key-positions = <21 22>;
+        };
+
+        del_io {
+            bindings = <&kp DELETE>;
+            key-positions = <7 8>;
+        };
+
+        enter_kl {
+            bindings = <&kp ENTER>;
+            key-positions = <17 18>;
+        };
+
+        toggleMode_dot_comma {
+            bindings = <&out OUT_TOG>;
+            key-positions = <27 28>;
         };
     };
 
@@ -74,19 +89,19 @@
 
         layer_3 {
             bindings = <
-&kp TILDE  &trans          &trans            &trans                &trans    &trans  &trans                 &trans             &trans           &kp PIPE
-&kp GRAVE  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &trans    &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp BACKSLASH
-&trans     &trans          &trans            &trans                &trans    &trans  &trans                 &trans             &trans           &trans
-                                             &trans                &trans    &trans  &trans
+&trans  &trans          &trans            &trans                &kp UNDERSCORE    &kp EQUAL  &trans                 &trans             &trans           &trans
+&trans  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp MINUS         &kp PLUS   &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans
+&trans  &trans          &trans            &trans                &kp GRAVE         &kp TILDE  &trans                 &trans             &trans           &trans
+                                          &trans                &trans            &trans     &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
+                        &trans  &trans    &trans    &trans
             >;
         };
     };
