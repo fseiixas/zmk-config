@@ -89,10 +89,10 @@ HRML(A,S,D,F)  &kp G              &kp H        HRMR(J,K,L,SEMICOLON)
 
         layer_3 {
             bindings = <
-&kp TILDE  &trans          &trans            &trans                &kp MINUS    &kp UNDER          &trans                 &trans             &trans           &kp PIPE
-&kp GRAVE  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp SQT      &kp DOUBLE_QUOTES  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp NON_US_BACKSLASH
-&trans     &trans          &trans            &trans                &kp PLUS     &kp EQUAL          &trans                 &trans             &trans           &trans
-                                             &trans                &trans       &trans             &trans
+&kp TILDE  &kp MINUS       &kp UNDER         &kp SQT               &trans    &trans  &kp DOUBLE_QUOTES      &kp EQUAL           &kp PLUS         &kp PIPE
+&kp GRAVE  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &trans    &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp NON_US_BACKSLASH
+&trans     &trans          &trans            &trans                &trans    &trans  &trans                 &trans             &trans           &trans
+                                             &trans                &trans    &trans  &trans
             >;
         };
 
