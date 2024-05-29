@@ -71,8 +71,8 @@ HRML(A,S,D,F)  &kp G              &kp H        HRMR(J,K,L,SEMICOLON)
 
         layer_1 {
             bindings = <
-&kp LG(GRAVE)     &kp LG(TAB)       &kp LA(RC(RG(NUMBER_6)))  &kp LA(RC(RG(NUMBER_7)))        &kp LA(RC(RG(NUMBER_8)))          &kp LG(LC(LEFT))        &kp LG(LS(M))   &kp LG(LS(C))     &kp LG(LC(RIGHT))  &trans
-&kp LA(RC(RG(NUMBER_1)))  &kp LA(RC(RG(NUMBER_2)))  &kp LA(RC(RG(NUMBER_3)))  &kp LA(RC(RG(NUMBER_4)))  &kp LA(RC(RG(NUMBER_5)))    &kp LS(LG(LEFT_ARROW))  &kp LG(LS(UP))  &kp LG(LS(DOWN))  &kp LS(LG(RIGHT))  &trans
+&kp LG(GRAVE)     &kp LG(TAB)       &kp F20  &kp F21        &kp F22          &kp LG(LC(LEFT))        &kp LG(LS(M))   &kp LG(LS(C))     &kp LG(LC(RIGHT))  &trans
+&kp F14  &kp F15  &kp F16  &kp F17  &kp F18    &kp F19  &kp LG(LS(UP))  &kp LG(LS(DOWN))  &kp LS(LG(RIGHT))  &trans
 &kp LG(Z)         &kp LG(X)            &kp LG(C)            &kp LG(V)            &trans&trans                  &trans          &trans            &trans             &trans
                                                       &trans            &trans              &trans                  &trans
             >;
