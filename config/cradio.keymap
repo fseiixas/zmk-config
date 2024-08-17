@@ -71,10 +71,10 @@ combos {
 
         layer_1 {
             bindings = <
-&trans         &trans         &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&kp LA(LG(A))  &kp LA(LG(S))  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans         &trans         &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                                      &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans      &trans        &trans  &trans  &trans  &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp LC(F4)  &kp LC(F5)    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans        &trans  &trans  &trans  &trans  &trans
+                        &trans      &trans        &trans  &trans
             >;
         };
 
