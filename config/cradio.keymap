@@ -11,76 +11,37 @@
 
 
 / {
-    macros {
-        cd1: cd1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp N1>,
-                <&macro_release>,
-                <&kp LALT>;
+    combos {
+        compatible = "zmk,combos";
+
+        esc_sd {
+            bindings = <&kp ESCAPE>;
+            key-positions = <11 12>;
         };
 
-        cd2: cd2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LALT>;
+        tab_we {
+            bindings = <&kp TAB>;
+            key-positions = <1 2>;
         };
 
-        cd3: cd3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp N3>,
-                <&macro_release>,
-                <&kp LALT>;
-
-            label = "CD3";
+        spot_xc_command_enter {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <21 22>;
         };
 
-        cd4: cd4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp N4>,
-                <&macro_release>,
-                <&kp LALT>;
-
-            label = "CD4";
+        del_io {
+            bindings = <&kp DELETE>;
+            key-positions = <7 8>;
         };
 
-        cd5: cd5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp N5>,
-                <&macro_release>,
-                <&kp LALT>;
+        enter_kl {
+            bindings = <&kp ENTER>;
+            key-positions = <17 18>;
+        };
 
-            label = "CD5";
+        toggleMode_dot_comma {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <27 28>;
         };
     };
 
@@ -110,7 +71,7 @@
         layer_1 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&cd1    &cd2    &cd3    &cd4    &cd5      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
                         &trans  &trans    &trans  &trans
             >;
