@@ -5,8 +5,8 @@
 #include <dt-bindings/zmk/keys.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
+//#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
+//#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 #include <dt-bindings/zmk/outputs.h>
 
 
@@ -62,34 +62,34 @@ combos {
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T              &kp Y        &kp U  &kp I      &kp O    &kp P
-HRML(A,S,D,F)  &kp G              &kp H        HRMR(J,K,L,SEMICOLON)
-&kp Z  &kp X  &kp C  &kp V  &kp B              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH
-                     &mo 1  &lt 2 BACKSPACE    &lt 3 SPACE  &mo 4
+&kp Q             &kp W           &kp E               &kp R       &kp T              &kp Y        &kp U       &kp I        &kp O       &kp P
+&mt LEFT_SHIFT A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LGUI F  &kp G              &kp H        &mt RGUI J  &mt RCTRL K  &mt RALT L  &mt RSHFT SEMICOLON
+&kp Z             &kp X           &kp C               &kp V       &kp B              &kp N        &kp M       &kp COMMA    &kp DOT     &kp FSLH
+                                                      &mo 1       &lt 2 BACKSPACE    &lt 3 SPACE  &mo 4
             >;
         };
 
         layer_1 {
             bindings = <
-&kp LG(GRAVE)     &kp LG(TAB)       &kp LA(N6)  &kp LA(N7)        &kp LA(N8)          &kp LG(LC(LEFT))        &kp LG(LS(M))   &kp LG(LS(C))     &kp LG(LC(RIGHT))  &trans
-&kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)    &kp LG(LS(LEFT))  &kp LG(LS(UP))  &kp LG(LS(DOWN))  &kp LS(LG(RIGHT))  &trans
-&kp LG(Z)         &kp LG(X)            &kp LG(C)            &kp LG(V)            &trans&trans                  &trans          &trans            &trans             &trans
-                                                      &trans            &trans              &trans                  &trans
+&trans               &trans               &trans               &trans               &trans                 &trans               &trans               &trans               &trans               &trans
+&kp INTERNATIONAL_1  &kp INTERNATIONAL_2  &kp INTERNATIONAL_3  &kp INTERNATIONAL_4  &kp INTERNATIONAL_5    &kp INTERNATIONAL_6  &kp INTERNATIONAL_7  &kp INTERNATIONAL_8  &kp INTERNATIONAL_9  &kp F13
+&trans               &trans               &trans               &trans               &trans                 &trans               &trans               &trans               &trans               &trans
+                                                               &trans               &trans                 &trans               &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(NUMBER_6)  &kp LS(AMPS)  &kp LS(STAR)  &trans  &trans
-&kp N1        &kp N2      &kp N3         &kp N4        &kp N5           &kp N6            &kp N7        &kp N8        &kp N9  &kp N0
-&trans        &trans      &trans         &trans        &trans           &trans            &trans        &trans        &trans  &trans
+&kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(NUMBER_6)  &kp LS(AMPS)  &kp LS(STAR)  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
+&kp N1        &kp N2      &kp N3         &kp N4        &kp N5           &kp N6            &kp N7        &kp N8        &kp N9             &kp N0
+&trans        &trans      &trans         &trans        &trans           &trans            &trans        &trans        &trans             &trans
                                          &trans        &trans           &trans            &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&kp TILDE  &kp MINUS       &kp UNDER         &kp SQT               &trans    &trans  &kp DOUBLE_QUOTES      &kp EQUAL           &kp PLUS         &kp PIPE
+&kp TILDE  &kp MINUS       &kp UNDER         &kp SQT               &trans    &trans  &kp DOUBLE_QUOTES      &kp EQUAL          &kp PLUS         &kp PIPE
 &kp GRAVE  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &trans    &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp BACKSLASH
 &trans     &trans          &trans            &trans                &trans    &trans  &trans                 &trans             &trans           &trans
                                              &trans                &trans    &trans  &trans
