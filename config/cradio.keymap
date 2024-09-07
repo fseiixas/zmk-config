@@ -4,9 +4,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-// Home row mods macro
-//#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-//#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 #include <dt-bindings/zmk/outputs.h>
 
 
@@ -54,7 +51,7 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-        
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -65,13 +62,29 @@
         };
     };
 
+    macros {
+        alt_number: alt_number {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ALT_NUMBER";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
 &kp Q              &kp W            &kp E                &kp R        &kp T              &kp Y        &kp U        &kp I         &kp O        &kp P
-&bhm LEFT_SHIFT A   &bhm LEFT_ALT S   &bhm LEFT_CONTROL D   &bhm LGUI F   &kp G              &kp H        &bhm RGUI J   &bhm RCTRL K   &bhm RALT L   &bhm RSHFT SEMICOLON
+&bhm LEFT_SHIFT A  &bhm LEFT_ALT S  &bhm LEFT_CONTROL D  &bhm LGUI F  &kp G              &kp H        &bhm RGUI J  &bhm RCTRL K  &bhm RALT L  &bhm RSHFT SEMICOLON
 &kp Z              &kp X            &kp C                &kp V        &kp B              &kp N        &kp M        &kp COMMA     &kp DOT      &kp FSLH
                                                          &mo 1        &lt 2 BACKSPACE    &lt 3 SPACE  &mo 4
             >;
@@ -79,10 +92,10 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(NUMBER_5)    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&trans                &trans                &trans                &trans            &trans              &trans  &trans  &trans  &trans  &trans
+&alt_number NUMBER_1  &alt_number NUMBER_2  &alt_number NUMBER_3  &kp LA(NUMBER_4)  &kp LA(NUMBER_5)    &trans  &trans  &trans  &trans  &trans
+&trans                &trans                &trans                &trans            &trans              &trans  &trans  &trans  &trans  &trans
+                                                                  &trans            &trans              &trans  &trans
             >;
         };
 
