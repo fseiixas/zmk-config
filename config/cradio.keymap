@@ -90,9 +90,9 @@
 
         layer_1 {
             bindings = <
-&kp LS(LA(LC(A)))  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&kp LA(LS(A))                &trans                &trans                &trans            &trans              &trans  &trans  &trans  &trans  &trans
-&trans                &trans                &trans                &trans            &trans              &trans  &trans  &trans  &trans  &trans
+&kp F14     &trans      &trans      &trans      &trans    &trans       &trans  &trans  &trans  &trans
+&kp F13     &trans      &trans                &trans            &trans              &trans  &trans  &trans  &trans  &trans
+&trans      &trans      &trans                &trans            &trans              &trans  &trans  &trans  &trans  &trans
                                                                   &trans            &trans              &trans  &trans
             >;
         };
